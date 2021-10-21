@@ -193,10 +193,10 @@ GCOV_PROFILE := y
 endif
 
 # Module information used by KBuild framework
-obj-$(CONFIG_MSM_QDSP6_APRV2_RPMSG) += apr_dlkm.o
-obj-$(CONFIG_MSM_QDSP6_APRV3_RPMSG) += apr_dlkm.o
-obj-$(CONFIG_MSM_QDSP6_APRV2_VM) += apr_dlkm.o
-apr_dlkm-y := $(APRV_GLINK)
+obj-$(CONFIG_MSM_QDSP6_APRV2_RPMSG) += audio_apr.o
+obj-$(CONFIG_MSM_QDSP6_APRV3_RPMSG) += audio_apr.o
+obj-$(CONFIG_MSM_QDSP6_APRV2_VM) += audio_apr.o
+audio_apr-y := $(APRV_GLINK)
 
 obj-$(CONFIG_WCD_DSP_GLINK) += wglink_dlkm.o
 wglink_dlkm-y := $(WDSP_GLINK)

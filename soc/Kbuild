@@ -195,21 +195,21 @@ GCOV_PROFILE := y
 endif
 
 # Module information used by KBuild framework
-obj-$(CONFIG_PINCTRL_WCD) += pinctrl_wcd_dlkm.o
-pinctrl_wcd_dlkm-y := $(PINCTRL_WCD_OBJS)
+obj-$(CONFIG_PINCTRL_WCD) += audio_pinctrl_wcd.o
+audio_pinctrl_wcd-y := $(PINCTRL_WCD_OBJS)
 
 obj-$(CONFIG_PINCTRL_LPI) += pinctrl_lpi_dlkm.o
 pinctrl_lpi_dlkm-y := $(PINCTRL_LPI_OBJS)
 
-obj-$(CONFIG_SOUNDWIRE) += swr_dlkm.o
-swr_dlkm-y := $(SWR_OBJS)
+obj-$(CONFIG_SOUNDWIRE) += audio_swr.o
+audio_swr-y := $(SWR_OBJS)
 
-obj-$(CONFIG_SND_EVENT) += snd_event_dlkm.o
-snd_event_dlkm-y := $(SND_EVENT_OBJS)
+obj-$(CONFIG_SND_EVENT) += audio_snd_event.o
+audio_snd_event-y := $(SND_EVENT_OBJS)
 
-obj-$(CONFIG_SOUNDWIRE_WCD_CTRL) += swr_ctrl_dlkm.o
-obj-$(CONFIG_SOUNDWIRE_MSTR_CTRL) += swr_ctrl_dlkm.o
-swr_ctrl_dlkm-y := $(SWR_CTRL_OBJS)
+obj-$(CONFIG_SOUNDWIRE_WCD_CTRL) += audio_swr_ctrl.o
+obj-$(CONFIG_SOUNDWIRE_MSTR_CTRL) += audio_swr_ctrl.o
+audio_swr_ctrl-y := $(SWR_CTRL_OBJS)
 
 obj-$(CONFIG_WCD_SPI_AC) += wcd_spi_acc_ctl_dlkm.o
 wcd_spi_acc_ctl_dlkm-y := $(WCD_SPI_ACC_CTL_OBJS)

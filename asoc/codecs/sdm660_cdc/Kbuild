@@ -131,14 +131,14 @@ GCOV_PROFILE := y
 endif
 
 # Module information used by KBuild framework
-obj-$(CONFIG_SND_SOC_ANALOG_CDC) += analog_cdc_dlkm.o
-analog_cdc_dlkm-y := $(ANALOG_CDC_OBJS)
+obj-$(CONFIG_SND_SOC_ANALOG_CDC) += audio_analog_cdc.o
+audio_analog_cdc-y := $(ANALOG_CDC_OBJS)
 
-obj-$(CONFIG_SND_SOC_DIGITAL_CDC) += digital_cdc_dlkm.o
-digital_cdc_dlkm-y := $(DIGITAL_CDC_OBJS)
+obj-$(CONFIG_SND_SOC_DIGITAL_CDC) += audio_digital_cdc.o
+audio_digital_cdc-y := $(DIGITAL_CDC_OBJS)
 
-obj-$(CONFIG_SND_SOC_DIGITAL_CDC_LEGACY) += digital_cdc_dlkm.o
-digital_cdc_dlkm-y := $(DIGITAL_CDC_OBJS)
+obj-$(CONFIG_SND_SOC_DIGITAL_CDC_LEGACY) += audio_digital_cdc.o
+audio_digital_cdc-y := $(DIGITAL_CDC_OBJS)
 
 # inject some build related information
 DEFINES += -DBUILD_TIMESTAMP=\"$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')\"
